@@ -1,0 +1,93 @@
+/* BEGIN Custom Arcade Gamepad Styling */
+.controller.custom {
+    background: url(placeholder-base.png); /* Placeholder base image */
+    height: 400px;
+    width: 400px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Container for buttons - arranged in a 1x4 grid with 70 degree clockwise rotation */
+.custom .buttons {
+    position: absolute;
+    width: 250px;
+    height: 62px;
+    top: 100px;
+    left: 75px;
+    transform: rotate(70deg);
+}
+
+/* Button styling for 4 buttons (Z, X, C, V) - using placeholder images */
+.custom .button {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url(placeholder-button.png); /* Placeholder button image */
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.custom .button.pressed {
+    background-position: -60px 0; /* Simulate press effect */
+}
+
+.custom .button.z { top: 0; left: 0; }
+.custom .button.x { top: 0; left: 70px; }
+.custom .button.c { top: 0; left: 140px; }
+.custom .button.v { top: 0; left: 210px; }
+
+/* Joystick positioning and states */
+.custom .joystick {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url(placeholder-stick.png); /* Placeholder stick image */
+    background-size: cover;
+    top: 200px;
+    left: 150px;
+    border-radius: 50%;
+}
+
+/* Stick movement states - 8 directional and center */
+.custom .joystick.up { top: 100px; left: 150px; }
+.custom .joystick.down { top: 300px; left: 150px; }
+.custom .joystick.left { top: 200px; left: 50px; }
+.custom .joystick.right { top: 200px; left: 250px; }
+.custom .joystick.up.left { top: 100px; left: 50px; }
+.custom .joystick.up.right { top: 100px; left: 250px; }
+.custom .joystick.down.left { top: 300px; left: 50px; }
+.custom .joystick.down.right { top: 300px; left: 250px; }
+.custom .joystick.center { top: 200px; left: 150px; }
+
+/* D-pad states (used for controller D-pad or keyboard arrows) */
+.custom .dpad {
+    position: absolute;
+    width: 140px;
+    height: 132px;
+    top: 50px;
+    left: 100px;
+}
+
+.custom .dpad .face {
+    background: url(placeholder-dpad.png); /* Placeholder D-pad image */
+    position: absolute;
+    width: 38px;
+    height: 52px;
+}
+
+.custom .dpad .face.up { top: 0; left: 50px; background-position: 92px 0px; }
+.custom .dpad .face.down { top: 79px; left: 50px; background-position: 131px 0; }
+.custom .dpad .face.left { top: 47px; left: 0; background-position: 0px 0; }
+.custom .dpad .face.right { top: 47px; left: 92px; background-position: 53px 0; }
+
+.custom .dpad .face.pressed {
+    margin-top: 5px;
+    background-position-y: 52px;
+}
+
+/* Input detection styles - using keypress detection for keyboard and controller input */
+.custom .input-detected {
+    background-color: rgba(255, 0, 0, 0.5); /* Red background for detected input */
+}
+
+/* END Custom Arcade Gamepad Styling */
